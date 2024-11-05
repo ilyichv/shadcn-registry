@@ -1,0 +1,50 @@
+{
+  "name": "shadcn-registry",
+  "version": "0.0.1",
+  "description": "A CLI tool to generate shadcn registry files.",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "ilyichv",
+    "url": "https://x.com/ilyichv_"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilyichv/shadcn-registry.git"
+  },
+  "keywords": [],
+  "main": "index.js",
+  "exports": "./dist/index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "pnpm biome check src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.1.0",
+    "rimraf": "^6.0.1",
+    "ts-morph": "^24.0.0",
+    "tsup": "^8.2.4",
+    "zod": "^3.23.8",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.8",
+    "@types/fs-extra": "^11.0.4",
+    "type-fest": "^4.26.1",
+    "typescript": "^5.5.4"
+  }
+}

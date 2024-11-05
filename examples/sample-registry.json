@@ -1,0 +1,24 @@
+[
+    {
+        "name": "use-copy-to-clipboard",
+        "type": "registry:hook",
+        "description": "A hook that allows you to copy text to the clipboard.",
+        "files": [
+            {
+                "path": "hooks/use-copy-to-clipboard.ts",
+                "type": "registry:hook"
+            }
+        ]
+    },
+    {
+        "name": "button",
+        "type": "registry:ui",
+        "description": "A button component.",
+        "files": [
+            {
+                "path": "ui/button.tsx",
+                "type": "registry:ui"
+            }
+        ]
+    }
+]
