@@ -41,15 +41,12 @@ export const build = new Command("build")
 	)
 	.action(async (registryPath, opts) => {
 		try {
-			console.log(opts);
 			const spinner = ora("Building registry").start();
 
 			const options = buildOptionsSchema.parse({
 				registry: registryPath,
 				...opts,
 			});
-
-			console.log(options);
 
 			if (!existsSync(options.path)) {
 				await fs.mkdir(options.path, { recursive: true });
