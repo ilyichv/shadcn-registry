@@ -8,9 +8,9 @@ CLI tool to generate [shadcn](https://ui.shadcn.com/) compatible registries.
 npm install shadcn-registry
 ```
 
-## Usage
+## Building The Registry
 
-1. Create a registry file. Registry files should be in JSON format and validate against the [registry schema](./src/registry/registry.schema.ts). You can find examples in the [examples](./examples) directory.
+1. Create a registry file. Registry files should be in JSON format and validate against the [registry schema](./src/registry/registry.schema.ts). You can find examples in the [examples](./examples) directory. You can also use the [`generate`](#generate-registry) command to generate a new registry (currently experimental).
 
 2. Build the registry:
     ```bash
@@ -35,6 +35,21 @@ You can use shadcn-registry in your CI/CD pipeline to automatically generate you
     "build:registry": "npx shadcn-registry@latest build <path-to-registry>"
 }
 ```
+
+
+## Generate registry
+
+The `generate` command is currently experimental.
+
+To generate a new registry, run the `generate` command with the path to the folder containing your components.
+
+```bash
+npx shadcn-registry@latest generate <path-to-components>
+```
+
+This will generate a new registry file in the same folder as your components, under a file called `index.json`.
+So if you run `npx shadcn-registry@latest generate ./components`, you will find the generated registry file at `./components/index.json`.
+
 
 ## License
 
