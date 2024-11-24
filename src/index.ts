@@ -2,6 +2,7 @@
 import { Command } from "commander";
 
 import { build } from "./commands/build";
+import { generate } from "./commands/generate";
 import { getPackageInfo } from "./utils/get-package-info";
 
 process.on("SIGINT", () => process.exit(0));
@@ -20,6 +21,7 @@ async function main() {
 		);
 
 	program.addCommand(build);
+	program.addCommand(generate);
 	program.parse();
 }
 
